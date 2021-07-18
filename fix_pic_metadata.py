@@ -21,6 +21,7 @@ for fname in files:
     keys = [piexif.ExifIFD.DateTimeOriginal, piexif.ExifIFD.DateTimeDigitized]
     for key in keys:
         str_time = exif_dict['Exif'][key]
+        #str_time = str_time.decode('UTF-8')  # if string is of the form b'...'
         time = datetime.strptime(str_time, '%Y:%m:%d %H:%M:%S')
         time += t_offset
         exif_dict['Exif'][key] = time.strftime('%Y:%m:%d %H:%M:%S')
