@@ -6,7 +6,7 @@
 detox -r -v -n <path to folder or file>
 
 #  normal run:
-detix -r -v <path to folder or file>
+detox -r -v <path to folder or file>
 
 #  postprocessing to remove some characters not captured by detox:
 files=`find <my_folder> -name "*+*"`
