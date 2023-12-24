@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for f in *.HEIC
+for f in `find ./ -type f \( -iname \*.HEIC -o -iname \*.heic \)`
 do
   fname=$(basename -- "$f")
   ext="${fname##*.}"
